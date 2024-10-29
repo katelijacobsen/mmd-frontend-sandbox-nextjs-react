@@ -4,7 +4,7 @@ import { IoClose } from "react-icons/io5";
 
 const AcceptCookies = () => {
   return (
-    <div className="relative bg-black text-white p-6 rounded-lg shadow-lg w-60">
+    <div className="fixed bottom-4 right-4 bg-black text-white p-6 rounded-lg shadow-lg w-60">
       <button className="absolute top-3 right-2 text-white hover:text-gray-400">
         <IoClose/>
       </button>
