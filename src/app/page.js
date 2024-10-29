@@ -1,12 +1,10 @@
-import Button from "@/components/Button"; //default export
-import { FaBeer } from "react-icons/fa"; //main export
+import AcceptCookies from "@/components/AcceptCookies"; //default export
 // se page lidt ligesom en index.html
 export default function Home() {
   //rendere på serveren
   return (
     <div>
-      <FaBeer className="button"/>
-      <Button />
+      <AcceptCookies />
     </div>
   );
 }
