@@ -1,11 +1,20 @@
-import AcceptCookies from "@/components/AcceptCookies"; //default export
-// se page lidt ligesom en index.html
+"use client";
+import { useState } from "react";
+import AcceptCookies from "@/components/AcceptCookies";
+import If from "@/components/If";
+
 export default function Home() {
-  //rendere på serveren
+  const [showCookies, setShowCookies] = useState(true);
+
+  const handleAccept = () => {
+    setShowCookies(false);
+  };
+
   return (
     <div>
-      <AcceptCookies />
+      <If condition={showCookies}>
+        <AcceptCookies onAccept={handleAccept} />
+      </If>
     </div>
   );
 }
-// se forskel mellem server og client componenter. Hvornår skal det ene blive valgt i frem for andet ?
